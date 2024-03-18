@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cursos</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0  ;
+        }
+        .carousel {
+            overflow: hidden;
+            width: 100%; /* Largura total da tela */
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .carousel ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+
+        .carousel li {
+            width: 100%; /* Preenche toda a largura do carrossel */
+            flex: 0 0 auto;
+            text-align: center;
+        }
+
+        .carousel img {
+            width: 100%; /* Garante que as imagens preencham a largura do contêiner */
+            height: auto; /* Mantém a proporção da imagem */
+            max-height: 900px;
+        }
+
+        .nav-btn {
+            cursor: pointer;
+            font-size: 24px;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255, 255, 255, 0.5);
+            padding: 5px;
+            border-radius: 5px;
+        }
+
+        .nav-btn-left {
+            left: 10px;
+        }
+
+        .nav-btn-right {
+            right: 10px;
+        }
+
+        .nav-btn:hover {
+            background: rgba(255, 255, 255, 0.8);
+        }
+        .hd{
+            text-align: center;
+            padding: 20px;
+            background-color: aqua;
+            border-radius: 25px;
+            margin: 10px;
+        }
+        .senha{
+            text-align: center;
+            margin: 20px;
+            padding: 10px;
+            background-color: aqua;
+            border-radius: 30px;
+            margin-left: 100px;
+            margin-right: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="hd">
+         <h1>Site de escolha de cursos com senha</h1>
+    </div>
+    <div class="carousel">
+        <ul id="carousel-list">
+            <!-- Os elementos <li> serão criados dinamicamente aqui -->
+        </ul>
+        <div class="nav-btn nav-btn-left" onclick="prevSlide()">&#10094;</div>
+        <div class="nav-btn nav-btn-right" onclick="nextSlide()">&#10095;</div>
+    </div>
+
+    <br><br>
+    <div class="senha">
+        <h1>Insira uma senha</h1>
+        <input id="textinput" name="textinput" value="" type="password">
+        <button type="button" onclick="enviar()">Confirmar</button>
+    </div>
+
+
+    <script type="text/javascript">
+        var currentSlide = 0;
+        var totalSlides = 3; // número total de slides
+        var images = ["imagem1.jpg", "imagem2.jpg", "imagem3.jpg"]; // Lista de imagens
+
+        var carouselList = document.getElementById('carousel-list');
+
+        // Cria dinamicamente os elementos <li> do carrossel com base na lista de imagens
+        for (var i = 0; i < images.length; i++) {
+            var listItem = document.createElement('li');
+            var img = document.createElement('img');
+            img.src = images[i];
+            img.alt = 'Curso ' + (i + 1); // Define o atributo 'alt' da imagem
+            listItem.appendChild(img);
+            carouselList.appendChild(listItem);
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            updateCarousel();
+        }
+
+        function prevSlide() {
+            currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+            updateCarousel();
+        }
+
+        function updateCarousel() {
+            var carouselItems = document.querySelectorAll('.carousel li');
+            carouselItems.forEach(function (item, index) {
+                if (index === currentSlide) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+
+        function enviar() {
+            var valor = document.getElementById("textinput").value;
+            switch (currentSlide) {
+                case 0:
+                    if (valor === "123") {
+                        window.location.href = "https://www.etecdenovaodessa.com.br/cursos/ensino-medio-integrado-ao-tecnico-em-desenvolvimento-de-sistemas/";
+                    } else {
+                        alert("Senha incorreta. Tente novamente.");
+                    }
+                    break;
+                case 1:
+                    if (valor === "123") {
+                        window.location.href = "https://www.etecdenovaodessa.com.br/cursos/ensino-medio-integrado-ao-tecnico-em-administracao/";
+                    } else {
+                        alert("Senha incorreta. Tente novamente.");
+                    }
+                    break;
+                case 2:
+                    if (valor === "123") {
+                        window.location.href = "https://www.etecdenovaodessa.com.br/cursos/ensino-medio-integrado-ao-tecnico-em-marketing/";
+                    } else {
+                        alert("Senha incorreta. Tente novamente.");
+                    }
+                    break;
+                default:
+                    alert("Opção inválida");
+            }
+        }
+
+        updateCarousel();
+    </script>
+</body>
+
+</html>
