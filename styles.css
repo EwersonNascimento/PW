@@ -1,0 +1,367 @@
+/* Estilos gerais */
+#index, #ctt{
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('img/a-complexidade-do-sile-controla-a-ordem-global-da-industria-de-comunicacao-gerada-pela-ia.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+#con{
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('img/cpu-4393380.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+/* Estilos da wrapper para centralizar verticalmente */
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+}
+
+/* Estilos do cabeçalho */
+.navbar {
+    background-color: #333;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 20px;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 0;
+}
+
+.nav-list li:hover {
+    background-color: rgb(59, 59, 59);
+    transition: 0.5s;
+}
+
+.nav-list li a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s;
+}
+
+.nav-list li a:hover {
+    color: #baf1ff;
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+}
+
+.menu-toggle span {
+    height: 3px;
+    width: 25px;
+    background-color: white;
+    margin: 3px 0;
+    border-radius: 3px;
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+    }
+
+    .carousel {
+        overflow: hidden;
+        width: 100%; /* Largura total da tela */
+        margin: 0 auto;
+        position: relative;
+    }
+    
+    .carousel ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        transition: transform 0.5s ease;
+    }
+    
+    .carousel li {
+        width: 100%; /* Preenche toda a largura do carrossel */
+        flex: 0 0 auto;
+        text-align: center;
+    }
+    
+    .carousel img {
+        width: 100%; /* Garante que as imagens preencham a largura do contêiner */
+        height: auto; /* Mantém a proporção da imagem */
+    }
+    
+    .nav-btn {
+        cursor: pointer;
+        font-size: 24px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background: rgba(255, 255, 255, 0.5);
+        padding: 5px;
+        border-radius: 5px;
+    }
+    
+    .nav-btn-left {
+        left: 10px;
+    }
+    
+    .nav-btn-right {
+        right: 10px;
+    }
+    
+    .nav-btn:hover {
+        background: rgba(255, 255, 255, 0.8);
+    }
+    
+
+    .nav-list {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 30px;
+        left: 0;
+        background-color: #333;
+        width: 100%;
+    }
+
+    .nav-list.active {
+        display: flex;
+    }
+
+    .nav-list li {
+        margin: 10px 0;
+    }
+    .navbar {
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+}
+ul{
+    transition: all .5s;
+}
+
+li {
+    padding: 7px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.navbar img {
+    width: 40px;
+    height: 40px;
+}
+
+.content {
+    flex: 1;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    color: white;
+}
+
+.texto {
+    text-align: left;
+    max-width: 900px;
+    padding: 20px;
+    margin: 30px;
+    border-radius: 15px;
+    color: rgb(255, 255, 255);
+    margin-bottom: 40px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 21px;
+}
+
+.textoesp {
+    text-align: left;
+    max-width: 800px;
+    padding: 20px;
+    margin: 30px;
+    border-radius: 15px;
+    color: rgb(255, 255, 255);
+    margin-bottom: 40px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 21px;
+}
+
+#esp{
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('img/como-escolher-uma-boa-placa-mae.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+#comp{
+    max-width: 800px;
+    max-height: 700px;
+    margin-bottom: 60px;
+    margin-left: 10px;
+}
+
+#tipos{
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('img/motherboard-885177.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+#tam{
+    margin-bottom: 40px;
+}
+#pci{
+    margin: 20px;
+    border-radius: 25px;
+    padding-right: 0;
+}
+@media screen and (min-width:1000px) and (max-width:1700px){
+    #comp, #tam, #pci{
+        position:absolute;
+        right: 3%;
+        top: 80%;
+        width: 40%;
+        height: auto;
+    }
+    .contato{
+        position: relative;
+    }
+    
+    form.contato{
+        margin: 100px;
+        width: calc(30% - 100px);
+    }
+    
+    form.contato > label{
+        font-size: 1.8rem;
+    }
+    
+    form.contato > input{
+        transform: scale(1);
+        width: 80%;
+        height: 50px;
+        font-size: 1.4rem;
+    }
+    .anchor-img {
+        margin-left: auto; /* Empurrar a imagem para a direita */
+        padding-right: 20px; /* Espaçamento à direita da imagem */
+        position: absolute;
+        right: 0%;
+    }
+    .footer-content {
+        flex: 1;
+        text-align: center;
+        padding-left: 0px;
+    }
+    #pci{
+        margin: 20px;
+        border-radius: 25px;
+        padding-right: 0;
+        max-width: 30%;
+    }
+}
+
+@media screen and (min-width:1800px) {
+    #comp{
+        position:absolute;
+        right: 8%;
+        top: 80%;
+    }
+    #tam, #pci{
+        position:absolute;
+        right: 3%;
+        top: 80%;
+        width: 40%;
+        height: auto;
+    }
+    .contato{
+        position: relative;
+    }
+    
+    form.contato{
+        margin: 100px;
+        width: calc(30% - 100px);
+    }
+    
+    form.contato > label{
+        font-size: 1.8rem;
+    }
+    
+    form.contato > input{
+        transform: scale(1);
+        width: 80%;
+        height: 50px;
+        font-size: 1.4rem;
+    }
+    .anchor-img {
+        margin-left: auto; /* Empurrar a imagem para a direita */
+        padding-right: 20px; /* Espaçamento à direita da imagem */
+        position: absolute;
+        right: 0%;
+    }
+    .footer-content {
+        text-align: center;
+        padding-left: 0px;
+        flex: 1;
+    }
+}
+
+form.contato{
+    margin: 100px;
+    width: calc(40% - 100px);
+}
+
+input, textarea{
+    border-radius: 10px;
+}
+
+textarea{
+    resize: none;
+}
+
+.footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: static;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+}
+
+.footer-content {
+    text-align: center;
+}
+@media screen and (max-width:990px) {
+    .footer-content {
+        padding-left: 110px;
+    }
+}
+
+
+
