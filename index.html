@@ -12,7 +12,7 @@
         }
         .carousel {
             overflow: hidden;
-            width: 100%; /* Largura total da tela */
+            width: 100%;
             margin: 0 auto;
             position: relative;
         }
@@ -26,14 +26,14 @@
         }
 
         .carousel li {
-            width: 100%; /* Preenche toda a largura do carrossel */
+            width: 100%;
             flex: 0 0 auto;
             text-align: center;
         }
 
         .carousel img {
-            width: 100%; /* Garante que as imagens preencham a largura do contêiner */
-            height: auto; /* Mantém a proporção da imagem */
+            width: 100%;
+            height: auto; 
             max-height: 900px;
         }
 
@@ -84,7 +84,7 @@
     </div>
     <div class="carousel">
         <ul id="carousel-list">
-            <!-- Os elementos <li> serão criados dinamicamente aqui -->
+            
         </ul>
         <div class="nav-btn nav-btn-left" onclick="prevSlide()">&#10094;</div>
         <div class="nav-btn nav-btn-right" onclick="nextSlide()">&#10095;</div>
@@ -100,17 +100,16 @@
 
     <script type="text/javascript">
         var currentSlide = 0;
-        var totalSlides = 3; // número total de slides
-        var images = ["imagem1.jpg", "imagem2.jpg", "imagem3.jpg"]; // Lista de imagens
+        var totalSlides = 3;
+        var images = ["imagem1.jpg", "imagem2.jpg", "imagem3.jpg"];
 
         var carouselList = document.getElementById('carousel-list');
 
-        // Cria dinamicamente os elementos <li> do carrossel com base na lista de imagens
         for (var i = 0; i < images.length; i++) {
             var listItem = document.createElement('li');
             var img = document.createElement('img');
             img.src = images[i];
-            img.alt = 'Curso ' + (i + 1); // Define o atributo 'alt' da imagem
+            img.alt = 'Curso ' + (i + 1);
             listItem.appendChild(img);
             carouselList.appendChild(listItem);
         }
